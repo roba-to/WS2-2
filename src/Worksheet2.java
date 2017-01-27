@@ -100,8 +100,8 @@ public class Worksheet2 implements Worksheet2Interface {
      *
      * Note: if the tree is empty then the boolean "true" will be returned
      *
-     * @param a
-     * @return
+     * @param a a tree of integers
+     * @return a boolean result indicating if the tree a, is a binary search tree
      */
     public static boolean isSearchTree(Tree a) {
         if (a.isEmpty()) {
@@ -120,7 +120,7 @@ public class Worksheet2 implements Worksheet2Interface {
      *
      * @param a a tree of integers
      * @param min the minimum value that the node of a tree/subtree must be greater than
-     * @param max the maximum vaue that the node of a tree/subtree must be less than
+     * @param max the maximum value that the node of a tree/subtree must be less than
      * @return a boolean indicating whether the tree is a binary search tree
      */
     public static boolean helpIsSearchTree(Tree a, int min, int max) {
@@ -141,7 +141,7 @@ public class Worksheet2 implements Worksheet2Interface {
     // Exercise 6
 
     /** printDescending is a method which when given a binary search tree
-     * of integers a, pritns the values stored in it in descending order.
+     * of integers a, prints the values stored in it in descending order.
      * It does this without building a separate list of the values.
      * Note: each value is separated by a single character of whitespace.
      *
@@ -179,7 +179,7 @@ public class Worksheet2 implements Worksheet2Interface {
         }
     }
     /** min is a method which, assuming the argument tree is a binary search tree,
-     * finds the minumum value stored in the tree. The method recursively calls itself
+     * finds the minimum value stored in the tree. The method recursively calls itself
      * on the left subtree until the final value, which must be the min in a BST, is found.
      *
      * @param a a Binary Search Tree of integers
