@@ -1,5 +1,5 @@
 /** @author Robert Keith Campbell
- *  @version 2017/01/27
+ *  @version 2017/01/30
  *
  * This class contains the solution for Worksheet2
  */
@@ -213,7 +213,7 @@ public class Worksheet2 implements Worksheet2Interface {
         if (a.isEmpty()) {
             return new Tree();
         }
-        else if (a.getValue() == x && a.getLeft().isEmpty() && a.getRight().isEmpty()) {
+        else if (a.getValue() == x && a.getHeight() == 1) {
             return new Tree();
         }
         else if (a.getValue() == x && a.getLeft().isEmpty()) {
@@ -383,7 +383,7 @@ public class Worksheet2 implements Worksheet2Interface {
         if (a.isEmpty()) {
             return new Tree();
         }
-        else if (a.getValue() == x && a.getLeft().isEmpty() && a.getRight().isEmpty()) {
+        else if (a.getValue() == x && a.getHeight() == 1) {
             return new Tree();
         }
         else if (a.getValue() == x && a.getLeft().isEmpty()) {
@@ -517,9 +517,34 @@ public class Worksheet2 implements Worksheet2Interface {
 //        Tree.print(t10result);
 //        System.out.println("\n\nIs it balanced? " + isHeightBalanced(t10result) + "\n");
 
-        Tree t11 = new Tree(5, new Tree(1, new Tree(0), new Tree(4)), new Tree(6));
-        System.out.println(t11);
+//        Tree t11 = new Tree(5, new Tree(1, new Tree(0), new Tree(4)), new Tree(6));
+//        System.out.println(t11);
+//
+//        System.out.println(deleteHB(5, t11));
 
-        System.out.println(deleteHB(5, t11));
+        Tree t12 = new Tree(10);
+        printDescending(t12);
+        System.out.println("");
+
+        t12 = new Tree(10, new Tree(5), new Tree(15));
+        printDescending(t12);
+        System.out.println("");
+
+        t12 = new Tree(10, new Tree(5), new Tree(15, new Tree(12), new Tree(20)));
+        printDescending(t12);
+        System.out.println("");
+
+        t12 = new Tree(10, new Tree(5, new Tree(2, new Tree(1), new Tree()), new Tree()), new Tree());
+        printDescending(t12);
+        System.out.println("");
+
+        t12 = new Tree(10, new Tree(), new Tree(15, new Tree(), new Tree(20, new Tree(), new Tree(25, new Tree(), new Tree(30)))));
+        printDescending(t12);
+        System.out.println("");
+
+        t12 = new Tree(10, new  Tree(5, new Tree(1, new Tree(0), new Tree(3, new Tree(2), new Tree(4))), new Tree(7, new Tree(6), new Tree(8, new Tree(), new Tree(9)))), new Tree(15, new Tree(12), new Tree(20)));
+        printDescending(t12);
+        System.out.println("");
     }
+
 }
